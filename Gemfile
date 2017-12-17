@@ -43,3 +43,5 @@ group :development do
   gem 'spring'
 end
 
+gem 'ridgepole', '0.6.6'
+
