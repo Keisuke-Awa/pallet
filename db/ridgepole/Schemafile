@@ -4,3 +4,13 @@ create_table "sites", force: :cascade do |t|
   t.datetime "created_at", null: false
   t.datetime "updated_at", null: false
 end
+
+create_table "categories", force: :cascade do |t|
+  t.string "name", limit: 255, null: false
+  t.text "description", limit: 65535
+  t.string "slug", limit: 255, null: false
+  t.string "ancestry", limit: 255
+  t.references "site", null: false, index: true, foreign_key: true
+  t.datetime "created_at", null: false
+  t.datetime "updated_at", null: false
+end
