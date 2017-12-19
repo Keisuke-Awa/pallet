@@ -502,12 +502,12 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="rails-dom-testing (vbundled(1.0.8)) [path][gem]">
+      <library name="rails-dom-testing (vbundled(1.0.9)) [path][gem]">
         <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/rails-dom-testing-1.0.8/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/rails-dom-testing-1.0.9/lib" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/rails-dom-testing-1.0.8/lib" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/rails-dom-testing-1.0.9/lib" />
         </SOURCES>
       </library>
     </orderEntry>
