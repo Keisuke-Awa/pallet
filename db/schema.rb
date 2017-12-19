@@ -13,6 +13,18 @@
 
 ActiveRecord::Schema.define(version: 0) do
 
+  create_table "categories", force: :cascade do |t|
+    t.string   "name",        limit: 255,   null: false
+    t.text     "description", limit: 65535
+    t.string   "slug",        limit: 255,   null: false
+    t.string   "ancestry",    limit: 255
+    t.integer  "site_id",     limit: 4,     null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  add_index "categories", ["site_id"], name: "index_categories_on_site_id", using: :btree
+
   create_table "sites", force: :cascade do |t|
     t.string   "name",       limit: 255, null: false
     t.string   "url",        limit: 255, null: false

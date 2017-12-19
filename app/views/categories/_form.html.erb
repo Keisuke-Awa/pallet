@@ -1,0 +1,36 @@
+<%= form_for([@site, @category], remote: true) do |f| %>
+  <div>
+    <div class="form-group row">
+      <%= f.label :id, 'カテゴリーID', class: "control-label col-sm-2" %>
+      <div class="col-sm-10">
+        <p class="form-control-static"><%= @category.try(:id) %></p>
+      </div>
+    </div>
+    <div class="form-group row">
+      <%= f.label :name, 'カテゴリー名', class: "control-label col-sm-2" %>
+      <div class="col-sm-10">
+        <%= f.text_field :name, class: "form-control" %>
+      </div>
+    </div>
+    <div class="form-group row">
+      <%= f.label :slug, 'スラッグ', class: "control-label col-sm-2" %>
+      <div class="col-sm-10">
+        <%= f.text_field :slug, class: "form-control" %>
+      </div>
+    </div>
+    <div class="form-group row">
+      <%= f.label :description, '説明文', class: "control-label col-sm-2" %>
+      <div class="col-sm-10">
+        <%= f.text_area :description, class: "form-control" %>
+      </div>
+    </div>
+    <div class="form-group row">
+      <%= f.label :parent_id, '親カテゴリ', class: "control-label col-sm-2" %>
+      <div class="col-sm-10">
+        <%= f.select :parent_id, Category.where.not(id: @category.id).map {|c| [c.name, c.id]}, {include_blank: "親カテゴリなし"}, class: "form-control input-sm" %>
+      </div>
+    </div>
+    <%= f.submit '保存', class: 'btn btn-primary' %>
+
+  </div>
+<% end %>

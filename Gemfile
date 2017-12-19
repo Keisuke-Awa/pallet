@@ -45,3 +45,5 @@ end
 
 gem 'ridgepole', '0.6.6'
 
+gem 'ancestry'
+
