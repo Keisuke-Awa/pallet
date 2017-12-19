@@ -1,8 +1,12 @@
-<h1>カテゴリ一覧</h1>
-<%= link_to '新規作成', new_site_category_url %>
-<% @categories.each do |category| %>
-  <h3><%= category.name %></h3>
-  <ul>
-    <li><%= link_to '編集', edit_site_category_url(@site, category) %></li>
-  </ul>
-<% end %>
+<div class="row">
+  <div class="col-md-offset-1 col-sm-10">
+    <h1>カテゴリ一覧</h1>
+    <%= link_to '新規作成', new_site_category_url, class: 'btn btn-primary' %>
+      <% @categories.each do |category| %>
+        <div class="row">
+          <h3 class="col-sm-2"><%= category.name %></h3>
+          <%= link_to '編集', edit_site_category_url(@site, category), class: 'btn btn-warning btn-sm col-sm-2 mx-auto' %>
+        </div>
+      <% end %>
+  </div>
+</div>

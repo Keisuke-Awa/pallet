@@ -14,12 +14,14 @@ class CategoriesController < ApplicationController
     @category = Category.new(category_params)
     @category.site = @site
     @category.save
+    redirect_to site_categories_path(@site)
   end
 
   def edit; end
 
   def update
     @category.update(category_params)
+    redirect_to site_categories_path(@site)
   end
 
   def destroy
