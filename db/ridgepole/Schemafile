@@ -14,3 +14,12 @@ create_table "categories", force: :cascade do |t|
   t.datetime "created_at", null: false
   t.datetime "updated_at", null: false
 end
+
+create_table "posts", force: :cascade do |t|
+  t.string "title", limit: 255, null: false
+  t.text "text", limit: 255, null: false
+  t.references "site", null: false, index: true, foreign_key: true
+  t.references "category", null: false, index: true, foreign_key: true
+  t.datetime "created_at", null: false
+  t.datetime "updated_at", null: false
+end
