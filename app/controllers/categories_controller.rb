@@ -7,15 +7,19 @@ class CategoriesController < ApplicationController
   end
 
   def new
+    @category = Category.new
   end
 
   def create
+    @category = Category.new(category_params)
+    @category.site = @site
+    @category.save
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
+    @category.update(category_params)
   end
 
   def destroy
@@ -28,5 +32,9 @@ class CategoriesController < ApplicationController
 
   def set_site
     @site = Site.find(params[:site_id])
+  end
+
+  def category_params
+    params.require(:category).permit(:name, :slug, :parent_id, :description)
   end
 end
