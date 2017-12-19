@@ -1,14 +1,4 @@
-Rails.application.routes.draw do
-  get 'post/new'
-
-  get 'post/create'
-
-  get 'post/edit'
-
-  get 'post/update'
-
-  get 'post/destroy'
-
+Rails.application.routes.draw do　
   root 'sites#index'
 
   resources :sites, only: [:show] do
