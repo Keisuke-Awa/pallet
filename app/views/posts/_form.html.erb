@@ -13,6 +13,12 @@
           <%= f.text_area :text, class: "form-control" %>
         </div>
       </div>
+      <div class="form-group row">
+        <%= f.label :category_id, 'カテゴリ', class: "control-label col-sm-2" %>
+        <div class="col-sm-10">
+          <%= f.select :category_id, Category.where(site_id: @site.id).map {|c| [c.name, c.id]}, {include_blank: "カテゴリ選択"}, class: "form-control input-sm" %>
+        </div>
+      </div>
       <%= f.submit '保存', class: 'btn btn-primary' %>
     </div>
   <% end %>
