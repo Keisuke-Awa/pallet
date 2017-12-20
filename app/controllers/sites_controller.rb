@@ -6,5 +6,6 @@ class SitesController < ApplicationController
 
   def show
     @site = Site.find(params[:id])
+    @posts = @site.posts
   end
 end
