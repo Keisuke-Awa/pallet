@@ -9,6 +9,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.site = @site
     @post.save
+    redirect_to site_url(@site)
   end
 
   def edit
@@ -26,6 +27,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:title, :text)
+    params.require(:post).permit(:title, :text, :category_id)
   end
 end
