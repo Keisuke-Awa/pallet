@@ -8,6 +8,7 @@
     <div class="col-sm-8">
       <h3><%= post.title %></h3>
       <%= link_to '編集', edit_site_post_url(@site, post), class:"btn btn-warning btn-xs" %>
+      <%= link_to '削除', site_post_url(@site, post), method: :delete, class:"btn btn-danger btn-xs" %>
       <h4 class="label label-default"><%= post.category.name %></h4>
       <p><%= post.text %></p>
     </div>
