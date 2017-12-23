@@ -33,7 +33,7 @@ create_table "items", force: :cascade do |t|
 end
 
 create_table "list_items", force: :cascade do |t|
-  t.integer "list_id", limit: 4
+  t.integer "list_id", limit: 4, null: false
   t.string "content", limit: 255
   t.integer "order", limit: 4, null: false
   t.datetime "created_at", null: false
@@ -54,7 +54,7 @@ create_table "texts", force: :cascade do |t|
   t.datetime "updated_at", null: false
 end
 
-add_foreign_key "sites", "posts", name: "fk_site_posts"
-add_foreign_key "categories", "posts", name: "fk_categories_posts"
-add_foreign_key "posts", "items", name: "fk_posts_items"
-add_foreign_key "lists", "lists_items", name: "fk_lists_list_items"
+add_foreign_key "posts", "sites", name: "fk_sites_posts"
+add_foreign_key "posts", "categories", name: "fk_categories_posts"
+add_foreign_key "items", "posts", name: "fk_posts_items"
+add_foreign_key "list_items", "lists", name: "fk_lists_list_items"
