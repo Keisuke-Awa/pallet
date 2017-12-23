@@ -14,6 +14,10 @@ class CategoriesController < ApplicationController
     @category = Category.new(category_params)
     @category.site = @site
     @category.save
+    ShardCategoryService.new(
+        site_name: @site.name,
+        master_category: @category,
+        ).run
     redirect_to site_categories_path(@site)
   end
 
@@ -21,6 +25,10 @@ class CategoriesController < ApplicationController
 
   def update
     @category.update(category_params)
+    ShardCategoryService.new(
+        site_name: @site.name,
+        master_category: @category,
+        ).run
     redirect_to site_categories_path(@site)
   end
 

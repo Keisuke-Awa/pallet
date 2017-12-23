@@ -106,6 +106,20 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
+      <library name="ar-octopus (vbundled(0.9.1)) [path][gem]">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/ar-octopus-0.9.1/sample_app" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/ar-octopus-0.9.1/gemfiles" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/ar-octopus-0.9.1/lib" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/ar-octopus-0.9.1/sample_app" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/ar-octopus-0.9.1/gemfiles" />
+          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/ar-octopus-0.9.1/lib" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
       <library name="arel (vbundled(6.0.4)) [path][gem]">
         <CLASSES>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.4.0/gems/arel-6.0.4/lib" />

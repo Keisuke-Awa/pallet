@@ -1,0 +1,12 @@
+  octopus:
+    replicated: true
+    fully_replicated: false
+    environments:
+      - development
+    development:
+      shards:
+        welq:
+          adapter: mysql2
+          host: localhost
+          database: welq_development
+
